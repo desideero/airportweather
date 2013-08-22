@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity" >
+    
+    <Spinner
+         android:id="@+id/spnAirportsList"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginBottom="10dip"
+         android:padding="10dip"
+         android:gravity="center"
+         android:textAlignment="center"
+         android:visibility="visible"
+         android:dropDownWidth="wrap_content" 
+         android:color="#ff0000"
+         android:popupBackground="@android:drawable/spinner_dropdown_background"
+         android:prompt="@string/select_city" />
+    
+    <RelativeLayout 
+        android:id="@+id/rlTitleCard"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" 
+	    android:padding="10dip"
+	    android:layout_margin="5dip"
+	    android:layout_below="@+id/spnAirportsList"
+	    android:background="@color/translucent_dark">
+
+        <TextView
+            android:id="@+id/tvAirportTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="No data available"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+        
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAirportTitle"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="10/12/2013"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white" />
+    
+    </RelativeLayout>
+	
+    <TableLayout 
+        android:id="@+id/tlWeatherData" 
+        android:layout_below="@+id/rlTitleCard" 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" 
+        android:layout_margin="5dip"
+        android:background="@android:color/transparent" >
+        
+        <!-- Rows will be added here dynamically! -->
+        
+	</TableLayout>
+</RelativeLayout>
