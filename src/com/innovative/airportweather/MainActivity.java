@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
 			spnAirportsList.setAdapter(mAdapterAirports);
 			mAdapterAirports.addAll(Airport.values());
 			// TODO: Get GPS location and choose the nearest airport
-			spnAirportsList.setSelection(0);
+			spnAirportsList.setSelection(mAdapterAirports.getPosition(Airport.SFO), true);
 		}
 	}
 	
@@ -139,5 +139,8 @@ public class MainActivity extends Activity {
 		tvWeatherDataName.setText(name);
 		tvWeatherDataValue.setText(value);
 		tlWeatherData.addView(row);
+//		TableLayout.LayoutParams lp = (TableLayout.LayoutParams)row.getLayoutParams();
+//		if (lp!=null)
+//			lp.setMargins(2, 10, 2, 10);
 	}
 }
